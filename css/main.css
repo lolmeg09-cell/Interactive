@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color:black;
+}
+
+@font-face {
+  font-family: "Pixel";
+  src: url(../Fonts/pixelpurl/PixelPurl.ttf);
+}
+
+
+#txt_container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60%;
+}
+
+#txt_layout {
+  
+  color: white;
+  font-family: "Pixel";
+  font-size: x-large;
+
+  max-width: 350px;
+  max-height: 200px;
+
+  overflow-y: auto;
+  word-wrap:break-word ;
+
+  text-align: left;
+  word-wrap: break-word;
+}
+
+
+#txt_layout p {
+  margin:0px;
+  line-height: 1.2;
+  margin-bottom:10px;
+}
+
+
+.choice:hover {
+  color: rgb(255, 255, 209);
+}
+
+
+.choice {
+  background-color: transparent;
+  border: none;
+  color: yellow;
+  font-family: "Pixel";
+  font-size: large;
+  cursor: pointer;
+}
+
+
+
+
+
+
