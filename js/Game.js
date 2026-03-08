@@ -1,4 +1,5 @@
 const optionButtonsElement = document.getElementById("option-buttons");
+const choice = document.createElement("button")
 
 let state = {};
 
@@ -12,10 +13,6 @@ function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(node => node.id === textNodeIndex);
 
   typeText(textNode.text);
-
-  if (state.overdose) {
-    shakeScreen();
-  }
 
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
@@ -45,7 +42,10 @@ function showOption(option) {
 
 function selectOption(option) {
 
-  if (isTyping) return;
+  if (isTyping) {
+    skipTyping();
+    return;
+  }
 
   const nextTextNodeId = option.nextText;
 
@@ -57,7 +57,5 @@ function selectOption(option) {
     return setTimeout(startGame, 2000);
   }
 
-  fadeOut(() => {
-    showTextNode(nextTextNodeId);
-  });
+  showTextNode(nextTextNodeId);
 }
