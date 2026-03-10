@@ -77,6 +77,7 @@ const textNodes = [
   { 
     id: 26, 
     text: "You stabilize.\nLow-income Americans fill opioid prescriptions at nearly double the rate of higher-income adults (10.2% vs 5.3%).\nYou break the pattern.", 
+    
     options: [ { text: "Hope Ending", nextText: 30 } ] 
   },
   { 
@@ -108,6 +109,8 @@ function loadScene(loadSceneIndex) {
     imageContainer.innerHTML = `<img src="${scene.img}" alt="">`
   }
 
-  textContainer.innerHTML = scene.text;
+  // textContainer.innerHTML = scene.text;
+  typeText(scene.text);
+ 
 
 }
