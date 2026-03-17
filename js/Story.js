@@ -106,11 +106,6 @@ function loadScene(loadSceneIndex) {
   if(scene.img) {
     imageContainer.innerHTML = `<img src="${scene.img}" alt="">`
   }
-<<<<<<< Updated upstream
-
-  textContainer.innerHTML = scene.text;
-=======
  
->>>>>>> Stashed changes
 
 }

@@ -19,18 +19,13 @@ function startGame() {
 }
 
 function showTextNode(textNodeIndex) {
-<<<<<<< Updated upstream
-=======
   const textNode = textNodes.find((node) => node.id === textNodeIndex);
   localStorage.setItem("currentTextNode", textNodeIndex); 
   console.log(localStorage.getItem("currentTextNode"));
->>>>>>> Stashed changes
 
-  const textNode = textNodes.find(node => node.id === textNodeIndex);
+  // const textNode = textNodes.find(node => node.id === textNodeIndex);
 
-<<<<<<< Updated upstream
-  typeText(textNode.text);
-=======
+  // typeText(textNode.text);
     console.log(textNode.options);
     textNode.options.forEach((option) => {
       if (true) {
@@ -46,33 +41,15 @@ function showTextNode(textNodeIndex) {
         optionButtonsElement.appendChild(choice);
       }
     });
-  };
->>>>>>> Stashed changes
+  // };
 
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
-  textNode.options.forEach(option => {
+  // textNode.options.forEach(option => {
 
-<<<<<<< Updated upstream
-    if (showOption(option)) {
-
-      const choice = document.createElement("span");
-      choice.innerText = option.text;
-      choice.classList.add("choice");
-
-      choice.addEventListener("click", (e) => {
-        e.stopPropagation();
-        selectOption(option);
-      });
-
-      optionButtonsElement.appendChild(choice);
-    }
-  });
-=======
   
->>>>>>> Stashed changes
 }
 
 function showOption(option) {
@@ -94,13 +71,9 @@ function selectOption(option) {
   }
 
   showTextNode(nextTextNodeId);
-<<<<<<< Updated upstream
-}
-=======
 }
 
 
 localStorage.clear();
 console.log(localStorage.clear());
 startGame();
->>>>>>> Stashed changes
