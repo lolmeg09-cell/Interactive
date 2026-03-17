@@ -20,12 +20,15 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find((node) => node.id === textNodeIndex);
+
+  console.log(textNode);
   localStorage.setItem("currentTextNode", textNodeIndex); 
   console.log(localStorage.getItem("currentTextNode"));
 
   // const textNode = textNodes.find(node => node.id === textNodeIndex);
 
-  // typeText(textNode.text);
+  typeText(textNode.text);
+  
     console.log(textNode.options);
     textNode.options.forEach((option) => {
       if (true) {
@@ -52,9 +55,7 @@ function showTextNode(textNodeIndex) {
   
 }
 
-function showOption(option) {
-  return option.requiredState == null || option.requiredState(state);
-}
+
 
 function selectOption(option) {
 
@@ -74,6 +75,11 @@ function selectOption(option) {
 }
 
 
+
+function clearLocalStorage() {
 localStorage.clear();
 console.log(localStorage.clear());
+}
+
+
 startGame();
