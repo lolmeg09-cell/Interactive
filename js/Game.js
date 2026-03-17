@@ -20,19 +20,24 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find((node) => node.id === textNodeIndex);
+  
   localStorage.setItem("currentTextNode", textNodeIndex); 
   console.log(localStorage.getItem("currentTextNode"));
 
-  // const textNode = textNodes.find(node => node.id === textNodeIndex);
-
-  // typeText(textNode.text);
-    console.log(textNode.options);
+  
+  console.log(textNode.options);
+  
+  const onTypingFinished = () => {
+    while (optionButtonsElement.firstChild) {
+      optionButtonsElement.removeChild(optionButtonsElement.firstChild);
+    }
+    
     textNode.options.forEach((option) => {
       if (true) {
         const choice = document.createElement("span");
         choice.innerText = option.text;
         choice.classList.add("choice");
-
+        
         choice.addEventListener("click", (e) => {
           e.stopPropagation();
           selectOption(option);
@@ -41,15 +46,15 @@ function showTextNode(textNodeIndex) {
         optionButtonsElement.appendChild(choice);
       }
     });
-  // };
+ };
 
-  while (optionButtonsElement.firstChild) {
+   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
+  document.addEventListener("typingFinished", onTypingFinished);
+ 
+ typeText(textNode.text);
 
-  // textNode.options.forEach(option => {
-
-  
 }
 
 function showOption(option) {
