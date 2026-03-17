@@ -19,7 +19,8 @@ const textNodes = [
     options: [ 
       { text: "Buy drugs", setState: { addiction: 2 }, nextText: 4 }, 
       { text: "Buy food", setState: { hope: 1 }, nextText: 6 } 
-    ] 
+    ],
+    img: "images/city.jpg"
   },
   { 
     id: 4, 
@@ -41,7 +42,7 @@ const textNodes = [
       { text: "Throw pill away", setState: { hope: 2 }, nextText: 9 }, 
       { text: "Take pill", nextText: 5 } 
     ],
-    img: "images/food.jpg"
+    
   },
   { 
     id: 8, 
@@ -98,8 +99,6 @@ loadScene(0);
 function loadScene(loadSceneIndex) {
 
   const scene = textNodes[loadSceneIndex];
-
-  let textContainer = document.getElementById("txt_layout");
   let imageContainer = document.getElementById("imgContainer");
 
   console.log(scene);
@@ -107,7 +106,11 @@ function loadScene(loadSceneIndex) {
   if(scene.img) {
     imageContainer.innerHTML = `<img src="${scene.img}" alt="">`
   }
+<<<<<<< Updated upstream
 
   textContainer.innerHTML = scene.text;
+=======
+ 
+>>>>>>> Stashed changes
 
 }
