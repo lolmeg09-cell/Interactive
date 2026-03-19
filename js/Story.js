@@ -27,7 +27,6 @@ const textNodes = [
     text: "The high is weaker this time — just a ghost of yesterday.", 
     options: [ 
       { text: "Take more", setState: { addiction: 3 }, nextText: 5 }, 
-      { text: "Sit down", nextText: 5 } 
     ] 
   },
   { 
