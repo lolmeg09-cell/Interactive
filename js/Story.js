@@ -3,8 +3,8 @@ const textNodes = [
     id: 1, 
     text: "Your apartment is rotting from neglect. Rent notices yellow on the wall. The fridge hums empty.\nA single pill rests in your palm.", 
     options: [ 
-      { text: "Take it", setState: { addiction: 1 }, nextText: 2 }, 
-      { text: "Hold back", setState: { hope: 1 }, nextText: 8 } 
+      { text: "Take it", nextText: 2 }, 
+      { text: "Hold back", nextText: 8 } 
     ],
     img: "images/apartment.png"
   },
@@ -17,8 +17,8 @@ const textNodes = [
     id: 3, 
     text: "A dealer leans against the convenience store, eyes sharp. Your pockets feel too light.", 
     options: [ 
-      { text: "Buy drugs", setState: { addiction: 2 }, nextText: 4 }, 
-      { text: "Buy food", setState: { hope: 1 }, nextText: 6 } 
+      { text: "Buy drugs", nextText: 4 }, 
+      { text: "Buy food", nextText: 6 } 
     ],
     img: "images/city.jpg"
   },
@@ -26,7 +26,7 @@ const textNodes = [
     id: 4, 
     text: "The high is weaker this time — just a ghost of yesterday.", 
     options: [ 
-      { text: "Take more", setState: { addiction: 3 }, nextText: 5 }, 
+      { text: "Take more", nextText: 5 }, 
     ] 
   },
   { 
@@ -38,7 +38,7 @@ const textNodes = [
     id: 6, 
     text: "The burger tastes real. Warmth spreads through you — you feel human again.", 
     options: [ 
-      { text: "Throw pill away", setState: { hope: 2 }, nextText: 9 }, 
+      { text: "Throw pill away", nextText: 9 }, 
       { text: "Take pill", nextText: 5 } 
     ],
     
@@ -47,7 +47,7 @@ const textNodes = [
     id: 8, 
     text: "You scroll in the dim glow. Hotlines. Job centers. A tiny thread of light.", 
     options: [ 
-      { text: "Call for help", setState: { hope: 2 }, nextText: 9 }, 
+      { text: "Call for help", nextText: 9 }, 
       { text: "Give up", nextText: 2 } 
     ] 
   },
@@ -60,7 +60,7 @@ const textNodes = [
     id: 10, 
     text: "Applications rejected, one after another.\n“We’ll call you.” The words taste like ash.", 
     options: [ 
-      { text: "Keep trying", setState: { hope: 3 }, nextText: 12 }, 
+      { text: "Keep trying", nextText: 12 }, 
       { text: "Walk toward old corner", nextText: 3 } 
     ] 
   },
@@ -82,7 +82,7 @@ const textNodes = [
   { 
     id: 28, 
     text: "You stop breathing.", 
-    options: [ { text: "Overdose Ending", setState: { overdose: true }, nextText: 1 } ] 
+    options: [ { text: "Overdose Ending", nextText: 1 } ] 
   },
   { 
     id: 30, 
