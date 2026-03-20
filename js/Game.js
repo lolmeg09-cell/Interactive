@@ -24,6 +24,13 @@ function showTextNode(textNodeIndex) {
   localStorage.setItem("currentTextNode", textNodeIndex); 
   console.log(localStorage.getItem("currentTextNode"));
 
+    const imageContainer = document.getElementById("imgContainer");
+    
+  if (textNode.img) {
+    imageContainer.innerHTML = `<img src="${textNode.img}" alt="">`;
+  } else {
+    imageContainer.innerHTML = ""; // clear image if none defined
+  }
   
   console.log(textNode.options);
   
@@ -51,7 +58,7 @@ function showTextNode(textNodeIndex) {
    while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
-  document.addEventListener("typingFinished", onTypingFinished);
+  document.addEventListener("typingFinished", onTypingFinished, { once: true });
  
  typeText(textNode.text);
 
