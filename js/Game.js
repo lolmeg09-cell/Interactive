@@ -1,5 +1,5 @@
 const optionButtonsElement = document.getElementById("option-buttons");
-const choice = document.createElement("button")
+
 
 
 
@@ -20,6 +20,17 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find((node) => node.id === textNodeIndex);
+  const fade = document.getElementById("fadeScreen");
+
+  
+  fade.style.transition = "opacity 0.1s";
+  fade.style.opacity = 0;
+
+  setTimeout(() => {
+    
+    fade.style.opacity = 1;
+  }, 300);
+  
 
   console.log(textNode);
   localStorage.setItem("currentTextNode", textNodeIndex); 
