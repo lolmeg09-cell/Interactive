@@ -70,9 +70,14 @@ body {
   top:20%;
   left: 50%;
   transform: translateX(-50%);
+  width: 350px;
+
 }
 
-
+#imgContainer img {
+  width: 100%;
+  height: auto;
+}
 
 
 
