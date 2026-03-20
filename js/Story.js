@@ -36,7 +36,7 @@ const textNodes = [
     id: 5, 
     text: "The rush fades fast. Your body feels heavy.\nOver 100,000 people died of overdose in 2022.\nNearly 300 every day.", 
     options: [ { text: "Close your eyes", nextText: 28 } ],
-    img: ""
+    img: "images/Overdose_ending.jpg"
   },
   { 
     id: 6, 
