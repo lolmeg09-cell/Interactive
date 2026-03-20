@@ -4,6 +4,10 @@ const optionButtonsElement = document.getElementById("option-buttons");
 
 
 function startGame() {
+   document.getElementById("localStorage_delet").addEventListener("click", () => {
+    localStorage.clear();
+    showTextNode(1);
+  });
   
 
   const savedNode = localStorage.getItem("currentTextNode");
@@ -94,13 +98,6 @@ function selectOption(option) {
   }
 
   showTextNode(nextTextNodeId);
-}
-
-
-
-function clearLocalStorage() {
-localStorage.clear();
-console.log(localStorage.clear());
 }
 
 

@@ -83,7 +83,11 @@ body {
   to   { opacity: 1; }
 }
 
-
+#localStorage_delet {
+  border-color: red;
+  background-color: transparent;
+  color: red;
+}
 
 
 
