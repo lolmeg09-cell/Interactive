@@ -30,6 +30,8 @@ function typeText(text) {
     if (currentPara >= splitted.length) {
       clearInterval(intervalID);
       isTyping = false;
+      const event = new CustomEvent('typingFinished');
+      document.dispatchEvent(event);
       return;
     }
 
@@ -55,4 +57,6 @@ function skipTyping() {
   });
 
   isTyping = false;
+  const event = new CustomEvent('typingFinished');
+  document.dispatchEvent(event);
 }
