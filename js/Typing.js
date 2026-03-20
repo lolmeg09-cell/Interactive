@@ -46,6 +46,9 @@ function typeText(text) {
     }
 
   }, 30);
+
+  
+
 }
 
 function skipTyping() {
@@ -55,7 +58,6 @@ function skipTyping() {
   splitted.forEach((line, index) => {
     paras[index].innerHTML = line;
   });
-
   isTyping = false;
   const event = new CustomEvent('typingFinished');
   document.dispatchEvent(event);
